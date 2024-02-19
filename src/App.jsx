@@ -65,6 +65,10 @@ const externalImageUrl = 'https://images.pexels.com/photos/933054/pexels-photo-9
 
   return (
     <main className="overflow-hidden duration-1000 transition-all ">
+      <header>
+        {/* add icon and title to page */}
+        
+      </header>
       <section className='p-[2rem]  mx-auto'>
         <NavBar />
 
