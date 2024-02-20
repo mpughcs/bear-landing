@@ -28,7 +28,6 @@ function App() {
 
   // const { scrollYProgress } = useScroll();
   const [isMounted, setIsMounted] = useState(false);
-  // const [activeTheme, setActiveTheme] = useState('light');s
 
   const containerVariants = {
     hidden: { opacity: 0 },
