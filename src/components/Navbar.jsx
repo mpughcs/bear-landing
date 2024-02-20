@@ -11,12 +11,17 @@ export default function NavBar({ onThemeChange }) {
   const [theme, setTheme] = React.useState('bear');
 
 
-  const toggleTheme = () => {
+  function toggleTheme(){
     const newTheme = theme === darkTheme ? defaultTheme : darkTheme;
     setTheme(newTheme);
     // Store the new theme in localStorage
     localStorage.setItem('theme', newTheme);
   };
+
+  function handleBearClick() {
+    console.log('clicked bear');
+  }
+
 
   // initially set the theme and "listen" for changes to apply them to the HTML tag
   useEffect(() => {
@@ -30,7 +35,7 @@ export default function NavBar({ onThemeChange }) {
       <div className="">
         <div className='flex justify-between items-baseline'>
           <img className='w-[60px] h-[75px] relative top-2 drop-shadow-xl object-cover' src={bear_logo} alt='bear logo' />
-          <a className="btn btn-ghost text-4xl font-Pacifico">Bear</a>
+          <a className="btn btn-ghost text-4xl font-Pacifico" onClick={handleBearClick}>Bear</a>
           <ul className="menu menu-horizontal px-1 w-screen flex items-baseline">
             <li><a className='hidden sm:block'>About</a></li>
             <li><a className='hidden  sm:block'>Blog</a></li>
@@ -50,10 +55,8 @@ export default function NavBar({ onThemeChange }) {
             </li>
           </ul>
           {/* <button className='btn relative '> */}
-          <div className=' cursor-pointer hover:bg-base-200 px-[10px] py-[5px] rounded-lg' onClick={toggleTheme} >
-
+          <div className='cursor-pointer hover:bg-base-200 px-[10px] py-[5px] rounded-lg' onClick={toggleTheme} tabIndex="0">
             <FaMoon className='text-2xl' />
-     
           </div>
         </div>
       </div>
