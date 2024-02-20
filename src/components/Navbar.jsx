@@ -49,8 +49,8 @@ export default function NavBar({ onThemeChange }) {
             <li className=' justify-end'>
             </li>
           </ul>
-          <button className='btn btn-ghost relative  '>
-            <FaMoon className='text-3xl ' onClick={toggleTheme} />
+          <button className='btn btn-ghost relative cursor-pointer '>
+            <FaMoon className='text-3xl ' onClick={ toggleTheme} />
           </button>
         </div>
       </div>
