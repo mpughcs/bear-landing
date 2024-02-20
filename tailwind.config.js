@@ -28,9 +28,6 @@ export default {
   },
   daisyui: {
     themes: [
-      "light",
-      "dark",
-      "cupcake",
       "dracula",
       {
         'bear': {
