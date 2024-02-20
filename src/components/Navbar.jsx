@@ -8,13 +8,12 @@ const defaultTheme = 'bear'; // Default theme if none is stored
 
 
 export default function NavBar({ onThemeChange }) {
-  const [theme, setTheme] = React.useState('bear');
+  const [theme, setTheme] = React.useState(localStorage.getItem('theme') || defaultTheme);
 
 
   function toggleTheme(){
     const newTheme = theme === darkTheme ? defaultTheme : darkTheme;
     setTheme(newTheme);
-    // Store the new theme in localStorage
     localStorage.setItem('theme', newTheme);
     
   };
@@ -31,7 +30,6 @@ export default function NavBar({ onThemeChange }) {
   // initially set the theme and "listen" for changes to apply them to the HTML tag
   useEffect(() => {
     document.querySelector('html').setAttribute('data-theme', theme);
-    // Optionally, if you have a callback for when the theme changes, you can call it here
     if (onThemeChange) onThemeChange(theme);
   }, [theme, onThemeChange]);
 
