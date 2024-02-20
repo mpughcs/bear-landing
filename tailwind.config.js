@@ -41,7 +41,7 @@ export default {
 
            'secondary' : '#ff674e',
            'secondary-focus' : '#ffe1dc',
-           'secondary-content' : '#ffffff',
+           'secondary-content' : '#82281a',
 
            'accent' : '#37cdbe',
            'accent-focus' : '#2ba69a',
