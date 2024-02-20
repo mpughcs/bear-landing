@@ -16,10 +16,17 @@ export default function NavBar({ onThemeChange }) {
     setTheme(newTheme);
     // Store the new theme in localStorage
     localStorage.setItem('theme', newTheme);
+    
   };
 
   function handleBearClick() {
     console.log('clicked bear');
+  }
+
+  function handleMoonClick() {
+    toggleTheme();
+    alert('clicked moon');
+    console.log('clicked moon');
   }
 
 
@@ -55,7 +62,7 @@ export default function NavBar({ onThemeChange }) {
             </li>
           </ul>
           {/* <button className='btn relative '> */}
-          <div className='cursor-pointer hover:bg-base-200 px-[10px] py-[5px] rounded-lg' onClick={toggleTheme} tabIndex="0">
+          <div className='cursor-pointer hover:bg-base-200 px-[10px] py-[5px] rounded-lg' onClick={handleMoonClick} tabIndex="0">
             <FaMoon className='text-2xl' />
           </div>
         </div>
