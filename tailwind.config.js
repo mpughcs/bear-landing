@@ -1,5 +1,3 @@
-/** @type {import('tailwindcss').Config} */
-
 module.exports = { 
   content: [
     "./index.html",
@@ -30,7 +28,9 @@ module.exports = {
   },
   daisyui: {
     themes: [
-   
+      "light",
+      "dark",
+      "cupcake",
       "dracula",
       {
         'bear': {
