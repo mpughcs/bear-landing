@@ -49,9 +49,12 @@ export default function NavBar({ onThemeChange }) {
             <li className=' justify-end'>
             </li>
           </ul>
-          <button className='btn relative '>
-            <FaMoon className='text-3xl cursor-pointer' onClick={ toggleTheme} />
-          </button>
+          {/* <button className='btn relative '> */}
+          <div className=' cursor-pointer hover:bg-base-200 px-[10px] py-[5px] rounded-lg' onClick={toggleTheme} >
+
+            <FaMoon className='text-2xl' />
+     
+          </div>
         </div>
       </div>
     </div>
