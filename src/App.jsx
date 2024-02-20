@@ -18,7 +18,7 @@ import LazyImage from './components/LazyImage';
 import NavBar from './components/Navbar';
 import ResponsiveCard from './components/ResponsiveCard';
 
-import './App.css'
+// import './App.css'
 
 const entryTransition = .4;
 const staggerTransition = .2;
