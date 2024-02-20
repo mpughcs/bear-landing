@@ -1,4 +1,4 @@
-module.exports = { 
+export default { 
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -35,19 +35,19 @@ module.exports = {
       {
         'bear': {
            'primary' : '#4aa5b4',
-           'primary-focus' : '#dbedf0',
+          //  'primary-focus' : '#dbedf0',
            'primary-content' : '#ffffff',
 
            'secondary' : '#ff674e',
-           'secondary-focus' : '#ffe1dc',
+          //  'secondary-focus' : '#ffe1dc',
            'secondary-content' : '#82281a',
 
            'accent' : '#37cdbe',
-           'accent-focus' : '#2ba69a',
+          //  'accent-focus' : '#2ba69a',
            'accent-content' : '#ffffff',
 
            'neutral' : '#655650',
-           'neutral-focus' : '#b2aaa7',
+          //  'neutral-focus' : '#b2aaa7',
            'neutral-content' : '#ffffff',
 
            'base-100' : '#f1efee',
@@ -78,6 +78,4 @@ module.exports = {
   },
 
   plugins: [require("@tailwindcss/typography"), require("daisyui")]
-
-
 }

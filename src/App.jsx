@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { BiBot } from "react-icons/bi";
 import { FaBell } from "react-icons/fa6";
 import { LuAlarmClock } from "react-icons/lu";
-import { themeChange } from 'theme-change';
+import React from 'react';
 
 import chris from './assets/images/chris.jpeg';
 import splash_image from './assets/images/deviceframes.png';
@@ -28,6 +28,8 @@ function App() {
 
   // const { scrollYProgress } = useScroll();
   const [isMounted, setIsMounted] = useState(false);
+
+  const aboutSectionRef = React.useRef(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -57,12 +59,11 @@ function App() {
       ease: 'easeInOut',
     },
   };
+  const handleAboutPressed = () => {
+    aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
 
-  useEffect(() => {
-    themeChange('bear');
-  }, [])
-
-
+ 
 
 
 
@@ -71,10 +72,12 @@ function App() {
     <main className="overflow-hidden duration-1000 transition-all ">
       <header>
         {/* add icon and title to page */}
+        <title>Bear</title>
+        
 
       </header>
       <section className='p-[2rem]  mx-auto'>
-        <NavBar />
+        <NavBar handleAboutPressed={handleAboutPressed} />
 
         <div className='flex flex-col md:flex-row justify-center items-center '>
           <motion.div className='max-w-md pb-[140px] flex flex-col gap-4 pt-20 '
@@ -157,7 +160,7 @@ function App() {
       </section>
 
       {/* how it works */}
-      <section className='bg-base-200 p-5 h-fit'>
+      <section className='bg-base-200 p-5 h-fit' ref={aboutSectionRef}>
         <div className='flex flex-col gap-7 max-w-[1300px] mx-auto py-12'>
           <h1 className='font-Poppins text-4xl text-center'>How it works</h1>
           <div className="flex gap-10 flex-wrap justify-center">

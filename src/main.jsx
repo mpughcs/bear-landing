@@ -5,6 +5,7 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <link rel="stylesheet" href='./index.css' />
     <App />
   </React.StrictMode>,
 )
