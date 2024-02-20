@@ -25,8 +25,6 @@ export default function NavBar({ onThemeChange }) {
 
   function handleMoonClick() {
     toggleTheme();
-    alert('clicked moon');
-    console.log('clicked moon');
   }
 
 
