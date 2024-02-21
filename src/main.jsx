@@ -4,8 +4,8 @@ import App from './App.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <link rel="stylesheet" type="text/css" href='./index.css' />
+  // <React.StrictMode>
+    // {/* <link rel="stylesheet" type="text/css" href='./index.css' /> */}
     <App />
-  </React.StrictMode>,
-)
+ 
+);

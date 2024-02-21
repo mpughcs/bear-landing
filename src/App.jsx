@@ -18,7 +18,6 @@ import LazyImage from './components/LazyImage';
 import NavBar from './components/Navbar';
 import ResponsiveCard from './components/ResponsiveCard';
 
-// import './App.css'
 
 const entryTransition = .4;
 const staggerTransition = .2;
@@ -66,28 +65,28 @@ function App() {
 
 
   return (
-    <main className="overflow-hidden duration-1000 transition-all">
+    <main className="overflow-hidden duration-20 transition-all">
       <header>
         {/* add icon and title to page */}
         <title>Bear</title>
         
 
       </header>
-      <section className='p-[2rem]  mx-auto'>
-        <NavBar handleAboutPressed={handleAboutPressed} />
+      <section className='p-[2rem] mx-auto max-w-screen-2xl'>
+        <NavBar handleAboutPressed={handleAboutPressed}  />
 
-        <div className='flex flex-col md:flex-row justify-center items-center '>
-          <motion.div className='max-w-md pb-[140px] flex flex-col gap-4 pt-20 '
+        <div className='flex flex-col sm:flex-row justify-center align-middle  '>
+          <motion.div className='max-w-md pb-[140px] flex flex-col pt-[2rem] sm:gap-8 sm:pb-0 z-[1] drop-shadow-md'
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ ease: 'easeInOut', duration: entryTransition }}
           >
             <h1 className='font-Poppins '>Gift with ease</h1>
             <h1 className='font-Poppins '>Gift with <span className='font-Pacifico text-secondary'>Bear</span></h1>
-            <p className='font-Poppins text-xl'>Never miss a special occasion again. </p>
+            <p className='font-Poppins '>Never miss a special occasion again. </p>
 
             <motion.ul
-              className='flex flex-col gap-4 pl-6 text-primary'
+              className='flex flex-col gap-4 pl-1 text-primary '
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -95,7 +94,7 @@ function App() {
               <motion.li
                 variants={itemVariants}
                 className='flex flex-row items-center gap-2'>
-                <FaBell className='text-4xl' />
+                <FaBell className='text-2xl sm:text-4xl' />
                 <p className='font-Poppins  '>Set reminders for important dates</p>
               </motion.li>
 
@@ -103,7 +102,7 @@ function App() {
                 variants={itemVariants}
                 className='flex flex-row items-center gap-2'
               >
-                <BiBot className='text-4xl ' />
+                <BiBot className='text-2xl sm:text-4xl ' />
 
                 <p className='font-Poppins '>Smart gift suggestions</p>
               </motion.li>
@@ -112,7 +111,7 @@ function App() {
                 variants={itemVariants}
                 className='flex flex-row items-center gap-2'
               >
-                <LuAlarmClock className='text-4xl ' />
+                <LuAlarmClock className='text-2xl sm:text-4xl ' />
                 <p className='font-Poppins  '>Send thoughtful gifts on time</p>
               </motion.li>
 
@@ -145,10 +144,10 @@ function App() {
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: .8 }}
               transition={{ ease: 'easeIn', duration: entryTransition }}
-              className='opacity-20 relative md:static w-full h-full'
+              className='opacity-20 relative sm:static w-full h-full'
             >
-              <div className=''>
-                <img src={splash_image} className='drop-shadow-xl min-w-[500px] absolute md:static bottom-0 left-10 mx-auto opacity-25 md:opacity-100' />
+              <div className='z-0'>
+                <img src={splash_image} className='drop-shadow-xl min-w-[500px] absolute sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 ' />
               </div>
             </motion.div>
           </div>
@@ -224,7 +223,7 @@ function App() {
 
 
           <div className='mx-auto'>
-            <LazyImage src={phone} alt='phone' className="drop-shadow-xl min-w-[250px] max-w-[300px] mx-auto hidden md:block "  />
+            <LazyImage src={phone} alt='phone' className="drop-shadow-xl min-w-[250px] max-w-[300px] mx-auto hidden sm:block "  />
           </div>
         
 

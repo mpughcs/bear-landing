@@ -52,16 +52,7 @@ export default {
            'warning' : '#ff9900',
            'error' : '#ff5724',
 
-          '--rounded-box': '1rem',          
-          '--rounded-btn': '.5rem',        
-          '--rounded-badge': '1.9rem',      
-
-          '--animation-btn': '.25s',       
-          '--animation-input': '.2s',       
-
-          '--btn-text-case': 'uppercase',   
-          '--navbar-padding': '.5rem',      
-          '--border-btn': '1px',            
+            
         },
       },
       "dracula",
