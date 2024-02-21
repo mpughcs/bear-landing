@@ -28,23 +28,18 @@ export default {
   },
   daisyui: {
     themes: [
-      "dracula",
       {
-        'bear': {
+        bear: {
            'primary' : '#4aa5b4',
-          //  'primary-focus' : '#dbedf0',
            'primary-content' : '#ffffff',
 
            'secondary' : '#ff674e',
-          //  'secondary-focus' : '#ffe1dc',
            'secondary-content' : '#82281a',
 
            'accent' : '#37cdbe',
-          //  'accent-focus' : '#2ba69a',
            'accent-content' : '#ffffff',
 
            'neutral' : '#655650',
-          //  'neutral-focus' : '#b2aaa7',
            'neutral-content' : '#ffffff',
 
            'base-100' : '#f1efee',
@@ -69,8 +64,11 @@ export default {
           '--border-btn': '1px',            
         },
       },
+      "dracula",
+
     ],
 
+    darkTheme: 'dracula',
 
   },
 

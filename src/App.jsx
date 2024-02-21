@@ -38,10 +38,7 @@ function App() {
       transition: {
         delayChildren: entryTransition + .2, // Delay the animations of the children by 0.5 seconds  
         staggerChildren: staggerTransition, // Stagger the animations of the children by 0.1 seconds
-
       },
-
-
     },
   };
 
@@ -69,7 +66,7 @@ function App() {
 
 
   return (
-    <main className="overflow-hidden duration-1000 transition-all ">
+    <main className="overflow-hidden duration-1000 transition-all">
       <header>
         {/* add icon and title to page */}
         <title>Bear</title>
