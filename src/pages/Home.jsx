@@ -16,7 +16,6 @@ import phone from '../assets/images/phone.png'
 import Avatar from "../components/Avatar";
 import Footer from '../components/Footer';
 import LazyImage from '../components/LazyImage';
-import NavBar from '../components/Navbar';
 import ResponsiveCard from '../components/ResponsiveCard';
 
 
@@ -55,9 +54,6 @@ export default function Home(props) {
         transition: {
             ease: 'easeInOut',
         },
-    };
-    const handleAboutPressed = () => {
-        aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
 
@@ -109,10 +105,9 @@ export default function Home(props) {
 
 
             </header>
-            <section className='p-[2rem] mx-auto max-w-screen-2xl'>
-                <NavBar handleAboutPressed={handleAboutPressed} />
+            <section className="p-[2rem] mx-auto max-w-screen-2xl">
 
-                <div className='flex flex-col sm:flex-row justify-center align-middle  '>
+                <div className='flex flex-col sm:flex-row justify-center align-middle '>
                     <motion.div className='max-w-md pb-[140px] flex flex-col pt-[2rem] sm:gap-8 sm:pb-0 z-[1] drop-shadow-md'
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
@@ -176,6 +171,7 @@ export default function Home(props) {
 
 
                     </motion.div>
+
                     <div className='max-w-[40%] flex-1'>
                         <motion.div
                             initial={{ x: -100, opacity: 0 }}
