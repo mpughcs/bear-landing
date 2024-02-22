@@ -1,6 +1,7 @@
 import { AnimatePresence } from 'framer-motion';
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Footer from './components/Footer';
 
 import { BlogProvider } from '../context/BlogContext';
 // Adjust the import path as needed
@@ -34,6 +35,7 @@ function App() {
             </Routes>
           </Router>
         </AnimatePresence>
+        <Footer />
       </main>
     </div>
   );
