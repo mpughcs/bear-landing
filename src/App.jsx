@@ -6,15 +6,15 @@ import { AnimatePresence } from 'framer-motion';
 import NavBar from './components/Navbar';
 
 
-function App() {
+function App({ }) {
 
   // const location = useLocation();
   const handleAboutPressed = () => {
-    // if we are on the home page, scroll to the about section
-    // if we are on blog page, navigate to the home page
-    if (window.location.pathname === '/') {
+
+    if (window.location.pathname === '') {
       aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' });
     }
+    // TODO: hook up reference to about section of page to scroll to it
     else {
       window.location.href = '/';
     }
