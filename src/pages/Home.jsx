@@ -69,11 +69,15 @@ export default function Home(props) {
 
                 <div className="modal-box prose">
                     <h2 className="">Contact Us</h2>
-                    <p className="">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
+                    <p className="">Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
                     <form action="#" className="flex flex-col gap-5">
                         <div>
                             <label htmlFor="email" className="">Your email</label>
                             <input type="email" id="email" className="shadow-sm  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
+                        </div>
+                        <div>
+                            <label htmlFor="firstname" className="">Your first name</label>
+                            <input type="fname" id="fname" className="shadow-sm  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Jane" required />
                         </div>
                         <div>
                             <label htmlFor="subject" className="">Subject</label>

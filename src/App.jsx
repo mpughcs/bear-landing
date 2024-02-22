@@ -1,43 +1,42 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import Home from './pages/Home';
-import BlogOverview from './pages/BlogOverview';
 import { AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+
+import { BlogProvider } from '../context/BlogContext';
+// Adjust the import path as needed
 import NavBar from './components/Navbar';
+import BlogOverview from './pages/BlogOverview';
+import Home from './pages/Home';
 
-
-function App({ }) {
-
-  // const location = useLocation();
+function App() {
   const handleAboutPressed = () => {
-
     if (window.location.pathname === '') {
-      aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-    // TODO: hook up reference to about section of page to scroll to it
-    else {
+      // aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      // Placeholder for your scroll logic
+    } else {
       window.location.href = '/';
     }
   };
 
-
   return (
-    <div className=''>
+    <div>
       <main className="overflow-hidden duration-20 transition-all select-none">
         <NavBar handleAboutPressed={handleAboutPressed} />
-        <AnimatePresence >
+        <AnimatePresence>
           <Router>
             <Routes>
               <Route path="/" element={<Home />} />
-
-              <Route path="/blog" element={<BlogOverview />} />
+              <Route path="/blog" element={
+                <BlogProvider>
+                  <BlogOverview />
+                </BlogProvider>
+              } />
             </Routes>
-          </Router >
+          </Router>
         </AnimatePresence>
       </main>
-    </div >
-
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;

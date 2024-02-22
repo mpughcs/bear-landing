@@ -8,7 +8,7 @@ export default function Footer() {
             <nav className="">
                 <h6 className="footer-title">Company</h6>
 
-                <a className="link link-hover">About us</a>
+                <a className="link link-hover" href="/blog">Blog</a>
                 <a className="link link-hover" onClick={() => document.getElementById('my_modal_5').showModal()} >Contact</a>
 
             </nav>
