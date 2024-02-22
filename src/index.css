@@ -19,5 +19,19 @@
     @apply text-sm;
     @apply lg:text-lg;
   }
+
+  .post {
+    @apply prose;
+  }
+  .post h1 {
+    @apply text-xl;
+    @apply text-green-400;
+  }
+  .post h2 {
+    @apply mt-4;
+    @apply mb-1;
+    @apply text-lg;
+  }
 }
 
+/* give me some dummy  */

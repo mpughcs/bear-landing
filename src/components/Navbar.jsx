@@ -41,7 +41,7 @@ export default function NavBar({ handleAboutPressed, onThemeChange }) {
   }, [theme, onThemeChange]);
 
   return (
-    <div className="max-w-screen-2xl px-[2rem]">
+    <div className="max-w-screen-2xl pt-[2rem] px-[2rem] mx-auto">
       <div className='flex justify-between items-baseline '>
         <img className='sm:w-[40px]  w-[30px] relative top-2 drop-shadow-xl object-cover' src={bear_logo} alt='bear logo' />
         <a className="btn btn-ghost text-3xl sm:text-4xl font-Pacifico" onClick={handleBearClick}>Bear</a>

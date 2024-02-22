@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { db } from "../../FirebaseConfig";
 import { collection, query, onSnapshot } from "firebase/firestore";
-import BlogPost from "../components/BlogPost";
+import BlogPreview from "../components/BlogPost";
+import PostModal from "../components/PostModal";
 
-export default function BlogOverview() {
+export default function BlogOverview({ }) {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [showModal, setShowModal] = useState(false);
+    const [modalId, setModalId] = useState('');
 
     useEffect(() => {
         const q = query(collection(db, "blogpost")); // Make sure "blogposts" matches your collection name
@@ -23,17 +26,28 @@ export default function BlogOverview() {
 
         return () => unsubscribe();
     }, []);
+
     console.log(posts);
 
+    const handleReadMore = () => {
+        setShowModal(!showModal);
+        console.log(showModal);
+
+
+        console.log('clicked');
+    }
+
     return (
-        <main className="p-[2rem]">
-            <h1 className="pb-7">Blog</h1>
-            <section className=" flex gap-4">
+        <main className="px-[2rem] pb-[rem] mx-auto max-w-screen-2xl transition-all duration-150">
+
+
+            <h1 className="py-7">Blog</h1>
+            <section className=" flex gap-4 justify-center">
                 {loading ? (
                     <p>Loading posts...</p>
                 ) : (
                     posts.map((post) => (
-                        <BlogPost
+                        <BlogPreview
                             key={post.id}
                             title={post.title}
                             content={post.content}
@@ -41,12 +55,11 @@ export default function BlogOverview() {
                             createdBy={post._createdBy.displayName}
                             headerPhoto={post.headerPhoto ? post.headerPhoto[0].downloadURL : "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"}
                             category={post.category}
-
                         />
                     ))
 
                 )}
             </section>
-        </main>
+        </main >
     );
 }
