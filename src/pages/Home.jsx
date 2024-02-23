@@ -183,7 +183,8 @@ export default function Home(props) {
                             className='opacity-20 relative sm:static w-full h-full'
                         >
                             <div className='z-0'>
-                                <img src={splash_image} className='drop-shadow-xl min-w-[500px] absolute sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 ' />
+                                <LazyImage src={splash_image} alt='splash' className='drop-shadow-xl min-w-[500px] absolute sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 ' />
+                                {/* <img src={splash_image} className='drop-shadow-xl min-w-[500px] absolute sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 ' /> */}
                             </div>
                         </motion.div>
                     </div>

@@ -1,4 +1,6 @@
-export default { 
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -6,8 +8,12 @@ export default {
   theme: {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
-      Poppins: ['Poppins', 'sans-serif'],
-      Pacifico: ['Pacifico', 'cursive'],
+      Poppins: ['Poppins', 'sans-serif', ...defaultTheme.fontFamily.sans],
+
+
+
+      Pacifico: ['Pacifico', 'cursive', ...defaultTheme.fontFamily.sans],
+
     },
 
 
@@ -21,7 +27,7 @@ export default {
       dropShadow: {
         'xlb': '0 15px 15px rgba(255, 255, 255, 0.25)',
         'xl': '0 5px 5px rgba(0, 0, 0, 0.484)'
-       
+
       },
     },
 
@@ -30,29 +36,29 @@ export default {
     themes: [
       {
         bear: {
-           'primary' : '#4aa5b4',
-           'primary-content' : '#ffffff',
+          'primary': '#4aa5b4',
+          'primary-content': '#ffffff',
 
-           'secondary' : '#ff674e',
-           'secondary-content' : '#82281a',
+          'secondary': '#ff674e',
+          'secondary-content': '#82281a',
 
-           'accent' : '#37cdbe',
-           'accent-content' : '#ffffff',
+          'accent': '#37cdbe',
+          'accent-content': '#ffffff',
 
-           'neutral' : '#655650',
-           'neutral-content' : '#ffffff',
+          'neutral': '#655650',
+          'neutral-content': '#ffffff',
 
-           'base-100' : '#f1efee',
-           'base-200' : '#dfdedd',
-           'base-300' : '#b3b5b7',
-           'base-content' : '#655650',
+          'base-100': '#f1efee',
+          'base-200': '#dfdedd',
+          'base-300': '#b3b5b7',
+          'base-content': '#655650',
 
-           'info' : '#1c92f2',
-           'success' : '#009485',
-           'warning' : '#ff9900',
-           'error' : '#ff5724',
+          'info': '#1c92f2',
+          'success': '#009485',
+          'warning': '#ff9900',
+          'error': '#ff5724',
 
-            
+
         },
       },
       "dracula",
