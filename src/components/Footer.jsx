@@ -1,7 +1,12 @@
 import MailChimpSub from "./MailChimpSub";
 import ContactModal from "./ContactModal";
+import React, { useEffect, useRef } from 'react';
 
-export default function Footer() {
+
+export default function Footer({ focusEntry }) {
+    const entryBoxRef = useRef(null);
+
+
     return (
         <div className="w-screen bg-base-200  ">
 
@@ -18,7 +23,7 @@ export default function Footer() {
                 </nav>
 
                 <nav>
-                    <MailChimpSub />
+                    <MailChimpSub focusEntry={focusEntry} />
                 </nav>
             </footer>
         </div>

@@ -23,7 +23,6 @@ import ResponsiveCard from '../components/ResponsiveCard';
 
 
 export default function Home(props) {
-    const [isMounted, setIsMounted] = useState(false);
 
     const aboutSectionRef = React.useRef(null);
     const entryTransition = .3;
@@ -56,6 +55,10 @@ export default function Home(props) {
         },
     };
 
+    const handleLearnMore = () => {
+        // scroll to about section
+        aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
 
 
 
@@ -163,8 +166,8 @@ export default function Home(props) {
                         >
                             <h1 className=' font-Pacifico  my-6'>Coming soon...</h1>
                             <div className='flex '>
-                                <button className='btn btn-primary'>Get Notified</button>
-                                <button className='btn btn-ghost'>Learn More</button>
+                                <button onClick={props.handleGetNotified} className='btn btn-primary'>Get Notified</button>
+                                <button onClick={handleLearnMore} className='btn btn-ghost'>Learn More</button>
                             </div>
                         </motion.div>
 

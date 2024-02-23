@@ -2,7 +2,7 @@ import { AnimatePresence } from 'framer-motion';
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
-
+import { useState } from 'react';
 import { BlogProvider } from '../context/BlogContext';
 // Adjust the import path as needed
 import NavBar from './components/Navbar';
@@ -10,6 +10,13 @@ import BlogOverview from './pages/BlogOverview';
 import Home from './pages/Home';
 
 function App() {
+  const [focusFooterEntry, setFocusFooterEntry] = useState(false);
+
+  // Function to handle when the user clicks "Get Notified"
+  const handleGetNotified = () => {
+    setFocusFooterEntry(true);
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  };
   const handleAboutPressed = () => {
     if (window.location.pathname === '') {
       // aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -25,7 +32,7 @@ function App() {
         <NavBar handleAboutPressed={handleAboutPressed} />
         <Router>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home handleGetNotified={handleGetNotified} />} />
             <Route path="/blog" element={
               <BlogProvider>
                 <BlogOverview />
@@ -33,7 +40,7 @@ function App() {
             } />
           </Routes>
         </Router>
-        <Footer />
+        <Footer focusEntry={focusFooterEntry} />
       </main>
     </div>
   );
