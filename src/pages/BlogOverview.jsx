@@ -42,7 +42,7 @@ export default function BlogOverview() {
         setSearchTerm(e.target.value);
     }
     return (
-        <main className="md:p-[4rem] p-[2rem] mx-auto max-w-screen-2xl transition-all duration-150">
+        <main className="md:p-[4rem] p-[2rem] mx-auto max-w-screen-2xl transition-all duration-150 h-screen">
             <div className="flex flex-row gap-3">
                 <label className="input input-bordered flex items-center gap-2 w-[300px]">
                     <CiSearch className="text-xl" />
