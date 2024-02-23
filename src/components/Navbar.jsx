@@ -47,7 +47,7 @@ export default function NavBar({ handleAboutPressed, onThemeChange }) {
           <li><a className='hidden sm:block' onClick={handleAboutPressed}>About</a></li>
           <li><a className='hidden  sm:block' href="/blog">Blog</a></li>
 
-          <li className='sm:hidden z-40'>
+          <li className='sm:hidden z-50'>
             <details className='self-baseline'>
               <summary className=''>
                 More
