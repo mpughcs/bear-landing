@@ -1,4 +1,4 @@
-export default function Avatar({ src , className}) {
+export default function Avatar({ src, className }) {
     return (
         <div className={`avatar ${className}`}>
             <div className="w-24 rounded-full overflow-hidden">
