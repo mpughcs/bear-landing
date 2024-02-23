@@ -4,7 +4,7 @@ import React from 'react';
 import { BiBot } from "react-icons/bi";
 import { FaBell } from "react-icons/fa6";
 import { LuAlarmClock } from "react-icons/lu";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 import chris from '../assets/images/chris.jpeg';
 import splash_image from '../assets/images/deviceframes.png';
@@ -17,10 +17,6 @@ import Avatar from "../components/Avatar";
 import Footer from '../components/Footer';
 import LazyImage from '../components/LazyImage';
 import ResponsiveCard from '../components/ResponsiveCard';
-
-
-
-
 
 export default function Home(props) {
 
@@ -279,8 +275,8 @@ export default function Home(props) {
                             We are working hard to bring you the best experience possible. Sign up to get notified when we launch.
                         </p>
                         <div className='flex gap-4 justify-start'>
-                            <button className='btn btn-secondary'>Get Notified</button>
-                            <button className='btn btn-ghost'>Contact Us</button>
+                            <button className='btn btn-secondary' onClick={props.handleGetNotified}>Get Notified</button>
+                            {/* <button className='btn btn-ghost'>Contact Us</button> */}
                         </div>
 
                     </div>

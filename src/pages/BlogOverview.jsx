@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { CiSearch } from "react-icons/ci";
+
 import { useBlog } from '../../context/BlogContext';
 import BlogPreview from "../components/BlogPost";
 import PostModal from "../components/PostModal";
-import { CiSearch } from "react-icons/ci";
 
 export default function BlogOverview() {
     const { posts, loading } = useBlog();
