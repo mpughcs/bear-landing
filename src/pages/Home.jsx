@@ -185,7 +185,7 @@ export default function Home(props) {
                             <div className='z-0'>
                                 <LazyImage src={splash_image} alt='splash' className='drop-shadow-xl min-w-[500px] absolute sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 ' />
                                 {/* <img src={splash_image} className='drop-shadow-xl min-w-[500px] absolute sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 ' /> */}
-                            </div>i
+                            </div>
                         </motion.div>
                     </div>
 

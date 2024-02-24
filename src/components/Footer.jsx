@@ -4,7 +4,6 @@ import React, { useEffect, useRef } from 'react';
 
 
 export default function Footer({ focusEntry }) {
-    const entryBoxRef = useRef(null);
 
 
     return (

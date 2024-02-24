@@ -26,10 +26,7 @@ export default function NavBar({ handleAboutPressed, onThemeChange }) {
   function handleMoonClick() {
     toggleTheme();
   }
-  function handleBlogPressed() {
-    window.location.href = '/blog';
 
-  }
 
 
   // initially set the theme and "listen" for changes to apply them to the HTML tag
