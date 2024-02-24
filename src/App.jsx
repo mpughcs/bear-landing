@@ -8,6 +8,8 @@ import { BlogProvider } from '../context/BlogContext';
 import NavBar from './components/Navbar';
 import BlogOverview from './pages/BlogOverview';
 import Home from './pages/Home';
+import { Helmet } from "react-helmet";
+
 
 function App() {
   const [focusFooterEntry, setFocusFooterEntry] = useState(false);
@@ -29,6 +31,11 @@ function App() {
   return (
     <div>
       <main className="overflow-hidden duration-20 transition-all select-none">
+        <Helmet>
+          <meta name="description" content="Never miss a special ocassion again. Add events, set reminders, and purchase gifts all in one place." />
+          <meta name="keywords" content="Calendar, Events, Reminders, Gift, Gift with Bear" />
+          <title>Bear</title>
+        </Helmet>
         <NavBar handleAboutPressed={handleAboutPressed} />
         <Router>
           <Routes>
@@ -42,7 +49,7 @@ function App() {
         </Router>
         <Footer focusEntry={focusFooterEntry} />
       </main>
-    </div>
+    </div >
   );
 }
 
