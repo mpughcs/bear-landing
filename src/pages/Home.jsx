@@ -6,13 +6,13 @@ import { FaBell } from "react-icons/fa6";
 import { LuAlarmClock } from "react-icons/lu";
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
-import chris from '../assets/images/chris.jpeg';
-import splash_image from '../assets/images/deviceframes.png';
+import chris from '../assets/images/chris.webp';
+import splash_image from '../assets/images/deviceframes.webp';
 import account from '../assets/images/graphics/account.svg';
 import cal from '../assets/images/graphics/cal.svg';
 import gift from '../assets/images/graphics/gifts.svg';
-import max from '../assets/images/max.png';
-import phone from '../assets/images/phone.png'
+import max from '../assets/images/max.webp';
+import phone from '../assets/images/phone.webp'
 import Avatar from "../components/Avatar";
 import Footer from '../components/Footer';
 import LazyImage from '../components/LazyImage';
@@ -185,7 +185,7 @@ export default function Home(props) {
                             <div className='z-0'>
                                 <LazyImage src={splash_image} alt='splash' className='drop-shadow-xl min-w-[500px] absolute sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 ' />
                                 {/* <img src={splash_image} className='drop-shadow-xl min-w-[500px] absolute sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 ' /> */}
-                            </div>
+                            </div>i
                         </motion.div>
                     </div>
 
@@ -234,7 +234,7 @@ export default function Home(props) {
         
         // z-10
 
-        bg-[url('./assets/images/confetti.jpg')]
+        bg-[url('./assets/images/confetti.webp')]
         bg-cover
         bg-no-repeat
         bg-center
