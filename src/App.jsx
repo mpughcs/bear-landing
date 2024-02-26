@@ -11,6 +11,10 @@ import Home from './pages/Home';
 import { Helmet } from "react-helmet";
 
 
+
+// TODO: 
+
+
 function App() {
   const [focusFooterEntry, setFocusFooterEntry] = useState(false);
 

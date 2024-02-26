@@ -30,7 +30,7 @@ export default function Home(props) {
         visible: {
             opacity: 1,
             transition: {
-                delayChildren: entryTransition + .2, // Delay the animations of the children by 0.5 seconds  
+                delayChildren: entryTransition + .1, // Delay the animations of the children by 0.5 seconds  
                 staggerChildren: staggerTransition, // Stagger the animations of the children by 0.1 seconds
             },
         },
@@ -116,9 +116,14 @@ export default function Home(props) {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ ease: 'easeInOut', duration: entryTransition }}
                     >
-                        <h1 className='font-Poppins '>Gift with ease</h1>
-                        <h1 className='font-Poppins '>Gift with <span className='font-Pacifico text-secondary'>Bear</span></h1>
-                        <p className='font-Poppins mb-5'>Never miss a special occasion again. </p>
+                        <h1 className='font-Poppins '>Gift with ease,</h1>
+                        <h1 className='font-Poppins '>gift with <span className='font-Pacifico text-secondary'>Bear</span></h1>
+
+                        {/* TODO: Make it more around the gift giving experience, less about the event plannign aspect of the app.  */}
+
+                        {/* <p className='font-Poppins mb-5'> Never miss a moment to show you care, gifting made easy with Bear.</p> */}
+                        <p className='font-Poppins mb-5'>Gift with grace, every time, every occasion.</p>
+
 
                         <motion.ul
                             className='flex flex-col gap-4 pl-1 text-primary '
@@ -130,7 +135,7 @@ export default function Home(props) {
                                 variants={itemVariants}
                                 className='flex flex-row items-center gap-2'>
                                 <FaBell className='text-2xl sm:text-4xl' />
-                                <p className='font-Poppins  '>Set reminders for important dates</p>
+                                <p className='font-Poppins  '><span className="text-info">Set reminders</span> for important dates</p>
                             </motion.li>
 
                             <motion.li
@@ -139,7 +144,7 @@ export default function Home(props) {
                             >
                                 <BiBot className='text-2xl sm:text-4xl ' />
 
-                                <p className='font-Poppins '>Smart gift suggestions</p>
+                                <p className='font-Poppins '><span className="text-info">AI-driven</span> gift suggestions</p>
                             </motion.li>
 
                             <motion.li
@@ -147,7 +152,7 @@ export default function Home(props) {
                                 className='flex flex-row items-center gap-2'
                             >
                                 <LuAlarmClock className='text-2xl sm:text-4xl ' />
-                                <p className='font-Poppins  '>Send thoughtful gifts on time</p>
+                                <p className='font-Poppins  '><span className="text-info">Thoughtful gifts</span> on time, every time</p>
                             </motion.li>
 
                         </motion.ul>
@@ -183,8 +188,8 @@ export default function Home(props) {
                             className='opacity-20 relative sm:static w-full h-full'
                         >
                             <div className='z-0'>
-                                <LazyImage src={splash_image} alt='splash' className='drop-shadow-xl min-w-[500px] absolute sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 ' />
-                                {/* <img src={splash_image} className='drop-shadow-xl min-w-[500px] absolute sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 ' /> */}
+                                {/* <LazyImage src={splash_image} alt='splash' className='drop-shadow-xl min-w-[500px] absolute sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 ' /> */}
+                                <img src={splash_image} className='drop-shadow-xl min-w-[500px] absolute sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 ' />
                             </div>
                         </motion.div>
                     </div>
