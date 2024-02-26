@@ -21,7 +21,7 @@ import ResponsiveCard from '../components/ResponsiveCard';
 export default function Home(props) {
 
     const aboutSectionRef = React.useRef(null);
-    const entryTransition = .3;
+    const entryTransition = .58;
     const staggerTransition = 0.1;
 
 
@@ -30,7 +30,7 @@ export default function Home(props) {
         visible: {
             opacity: 1,
             transition: {
-                delayChildren: entryTransition + .1, // Delay the animations of the children by 0.5 seconds  
+                delayChildren: .3, // Delay the animations of the children by 0.5 seconds  
                 staggerChildren: staggerTransition, // Stagger the animations of the children by 0.1 seconds
             },
         },
@@ -160,7 +160,7 @@ export default function Home(props) {
                         <motion.div className='flex flex-col gap-4 ml-5 '
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 1.2, duration: 1.5 }}
+                            transition={{ delay: .7, duration: 1.5 }}
 
 
 
