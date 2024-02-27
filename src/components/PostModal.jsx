@@ -21,8 +21,9 @@ export default function PostModal({ title, content, postDate, createdBy, headerP
                         <p className="card-title w-[60%] ">{title}</p>
 
                     </div>
-                    <span className="flex flex-row gap-2 relative">
-                        <Avatar src={createdBy.photoURL} alt={createdBy.displayName} className={"scale-[.7] absolute bottom-[-25px] left-[-10px]"} />
+                    <span className="flex flex-row gap-2 relative ">
+                        <img src={createdBy.photoURL} alt={createdBy.displayName} className={"scale-[.7] rounded-full absolute top-[-60px] left-[-10px]"} />
+
                         <p className=" text-xs w-fit text-nowrap text-secondary pl-[90px]">{createdBy.displayName}</p>
                         <p className="text-xs">{postDate}</p>
                     </span>

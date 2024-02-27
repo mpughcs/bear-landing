@@ -47,7 +47,7 @@ export default function NavBar({ handleAboutPressed, onThemeChange }) {
                 More
               </summary>
               <ul className="p-2 bg-base-100 rounded-t-none w-[190px]">
-                <li><a onClick={handleAboutPressed}>About us</a></li>
+                <li><a href="/about-us">About us</a></li>
                 <li><a href="/blog">Blog</a></li>
               </ul>
             </details>
