@@ -10,9 +10,6 @@ const defaultTheme = 'bear'; // Default theme if none is stored
 
 export default function NavBar({ handleAboutPressed, onThemeChange }) {
   const [theme, setTheme] = React.useState(localStorage.getItem('theme') || defaultTheme);
-  // variable to store the current theme
-
-  // variable to store the current theme
 
 
 
@@ -41,7 +38,7 @@ export default function NavBar({ handleAboutPressed, onThemeChange }) {
         <img className='sm:w-[40px]  w-[30px] relative top-2 drop-shadow-xl object-cover' src={bear_logo} alt='bear logo' />
         <a className="btn btn-ghost text-3xl sm:text-4xl font-Pacifico" href="/">Bear</a>
         <ul className="menu menu-horizontal px-1 w-screen flex items-baseline">
-          <li><a className='hidden sm:block' onClick={handleAboutPressed}>About Us</a></li>
+          <li><a className='hidden sm:block' href="/about-us">About Us</a></li>
           <li><a className='hidden  sm:block' href="/blog">Blog</a></li>
 
           <li className='sm:hidden z-50'>

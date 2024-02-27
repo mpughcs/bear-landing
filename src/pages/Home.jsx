@@ -56,6 +56,14 @@ export default function Home(props) {
         aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' });
     }
 
+    const handleAboutPressed = () => {
+        if (window.location.pathname === '') {
+            aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            window.location.href = '/';
+        }
+    }
+
 
 
 
@@ -269,24 +277,27 @@ export default function Home(props) {
                     </div>
 
 
-                    <div className='flex flex-col max-w-[500px] self-center text-base-100 basis-[300-px] prose min-w-[400px]'>
+                    <div className='flex flex-col max-w-[500px] self-center text-base-100 basis-[300-px] min-w-[400px]'>
 
-                        <h2 className='text-primary-content my-3'>Note from the developers</h2>
-                        <div className="flex gap-5">
-                            <Avatar src={chris} className={"self-end"} />
-                            <Avatar src={max} />
+                        <h1 className='text-primary-content my-5 '>Note from the developers</h1>
+                        <div className="flex gap-5 my-5">
+                            <Avatar src={chris} className={"self-end rounded-full"} />
+                            <Avatar src={max} className={"self-end rounded-full"} />
                         </div>
-                        <p className='text-left text-neutral-content max-w-[80%] '>
+                        <p className='text-left text-slate-100 max-w-[80%] prose '>
                             Designed for the thoughtful, the forgetful, and those who just want to make someone's day. Bear is the perfect tool to help you remember important dates and send thoughtful gifts on time.
                             We are working hard to bring you the best experience possible. Sign up to get notified when we launch.
                         </p>
-                        <div className='flex gap-4 justify-start'>
+                        <div className='flex gap-4 justify-start mt-7'>
                             <button className='btn btn-secondary' onClick={props.handleGetNotified}>Get Notified</button>
                             {/* <button className='btn btn-ghost'>Contact Us</button> */}
                         </div>
 
                     </div>
                 </div>
+            </section>
+            <section>
+
             </section>
 
 

@@ -1,16 +1,16 @@
 import { AnimatePresence } from 'framer-motion';
 import React from 'react';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Footer from './components/Footer';
 import { useState } from 'react';
+import { Helmet } from "react-helmet";
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+
 import { BlogProvider } from '../context/BlogContext';
+import Footer from './components/Footer';
 // Adjust the import path as needed
 import NavBar from './components/Navbar';
+import AboutUs from './pages/AboutUs';
 import BlogOverview from './pages/BlogOverview';
 import Home from './pages/Home';
-import { Helmet } from "react-helmet";
-
-
 
 // TODO: 
 
@@ -49,6 +49,7 @@ function App() {
                 <BlogOverview />
               </BlogProvider>
             } />
+            <Route path="/about-us" element={<AboutUs />} />
           </Routes>
         </Router>
         <Footer focusEntry={focusFooterEntry} />

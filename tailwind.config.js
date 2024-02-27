@@ -8,11 +8,11 @@ export default {
   theme: {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
-      Poppins: ['Poppins', 'sans-serif', ...defaultTheme.fontFamily.sans],
+      Poppins: ['Poppins', 'sans-serif'],
 
 
 
-      Pacifico: ['Pacifico', 'cursive', ...defaultTheme.fontFamily.sans],
+      Pacifico: ['Pacifico', 'cursive'],
 
     },
 
