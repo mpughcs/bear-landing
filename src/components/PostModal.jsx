@@ -1,7 +1,8 @@
 import Markdown from 'react-markdown'
+
 import Avatar from './Avatar';
 
-export default function PostModal({ title, content, postDate, createdBy, headerPhoto, category, className, showModal, onClose }) {
+export default function PostModal({ title, content, postDate, createdBy, headerPhoto, category, showModal, onClose }) {
     if (!showModal) return null;
 
     return (

@@ -5,6 +5,7 @@ import { useBlog } from '../../context/BlogContext';
 import BlogPreview from "../components/BlogPost";
 import PostModal from "../components/PostModal";
 
+const defaultImage = "https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 export default function BlogOverview() {
     const { posts, loading } = useBlog();
     const [filteredPosts, setFilteredPosts] = useState(posts);
@@ -79,7 +80,7 @@ export default function BlogOverview() {
                             content={post.content}
                             postDate={post._createdBy.timestamp.toDate().toDateString()}
                             createdBy={post._createdBy}
-                            headerPhoto={post.headerPhoto ? post.headerPhoto[0].downloadURL : "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"}
+                            headerPhoto={post.headerPhoto ? post.headerPhoto[0].downloadURL : defaultImage}
                             category={post.category}
                         />
                     ))
