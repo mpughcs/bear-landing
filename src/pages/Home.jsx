@@ -130,7 +130,7 @@ export default function Home(props) {
                         {/* TODO: Make it more around the gift giving experience, less about the event plannign aspect of the app.  */}
 
                         {/* <p className='font-Poppins mb-5'> Never miss a moment to show you care, gifting made easy with Bear.</p> */}
-                        <p className='font-Poppins mb-5'>Gift with grace, every time, every occasion.</p>
+                        {/* <p className='font-Poppins mb-5'>Gift with grace, every time, every occasion.</p> */}
 
 
                         <motion.ul
@@ -160,7 +160,7 @@ export default function Home(props) {
                                 className='flex flex-row items-center gap-2'
                             >
                                 <LuAlarmClock className='text-2xl sm:text-4xl ' />
-                                <p className='font-Poppins  '><span className="text-info">Thoughtful gifts</span> on time, every time</p>
+                                <p className='font-Poppins  '><span className="text-info">Thoughtful gifts</span> from top retailers</p>
                             </motion.li>
 
                         </motion.ul>
@@ -247,7 +247,7 @@ export default function Home(props) {
         
         // z-10
 
-        bg-[url('./assets/images/confetti.webp')]
+        bg-[url('./assets/images/BearXmas.jpg')]
         bg-cover
         bg-no-repeat
         bg-center
@@ -263,32 +263,30 @@ export default function Home(props) {
         before:scale-150
         before:filter
         before:blur-2xl
-        before:opacity-50
-        
+        before:opacity-75
+        max-w-[1500px]
+        mx-auto
+        before:md:opacity-50
 
         
         
         " >
-                <div className='max-w-[1000px] justify-center gap-12 mx-auto flex  py-10 '>
+                <div className='max-w-[1000px] h-[600px] md:h-[800px] gap-12 mx-auto flex  y-10 justify-center'>
 
 
-                    <div className='mx-auto'>
-                        <LazyImage src={phone} alt='phone' className="drop-shadow-xl min-w-[250px] max-w-[300px] mx-auto hidden sm:block " />
+                    <div className='mx-auto invisible md:visible'>
+                        {/* <LazyImage src={phone} alt='phone' className="drop-shadow-xl min-w-[250px] max-w-[300px] mx-auto hidden sm:block " /> */}
                     </div>
 
 
-                    <div className='flex flex-col max-w-[500px] self-center text-base-100 basis-[300-px] min-w-[400px]'>
+                    <div className='flex flex-col max-w-[500px] self-center text-base-100 basis-[300-px] min-w-[400px] md:pl-10 mx-auto items-center'>
 
-                        <h1 className='text-primary-content my-5 '>Note from the developers</h1>
-                        <div className="flex gap-5 my-5">
-                            <Avatar src={chris} className={"self-end rounded-full"} />
-                            <Avatar src={max} className={"self-end rounded-full"} />
-                        </div>
-                        <p className='text-left text-slate-100 max-w-[80%] prose '>
+
+                        <p className='text-left text-slate-100 max-w-[80%] drop-shadow-2xl prose'>
                             Designed for the thoughtful, the forgetful, and those who just want to make someone's day. Bear is the perfect tool to help you remember important dates and send thoughtful gifts on time.
                             We are working hard to bring you the best experience possible. Sign up to get notified when we launch.
                         </p>
-                        <div className='flex gap-4 justify-start mt-7'>
+                        <div className='flex gap-4 justify-start mt-7 pb-10 self-start pl-10'>
                             <button className='btn btn-secondary' onClick={props.handleGetNotified}>Get Notified</button>
                             {/* <button className='btn btn-ghost'>Contact Us</button> */}
                         </div>
