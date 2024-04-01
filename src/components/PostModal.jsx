@@ -8,7 +8,7 @@ export default function PostModal({ title, content, postDate, createdBy, headerP
     return (
         <dialog id="postModal" role='modal' className="modal modal-open transition-all duration-150 justify-center mx-auto">
             <div className="modal-box max-w-none  sm:w-[650px] xl:w-[1200px] h-screen relative">
-                <h1 className='text-secondary' >{category}</h1>
+                <h1 className='text-secondary text-2xl' >{category}</h1>
                 <form method="dialog sticky top-0">
                     <button onClick={onClose} className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 </form>

@@ -1,12 +1,14 @@
 import React from 'react';
-import { BiCake } from 'react-icons/bi'; // Ensure you have react-icons installed
-import { MdCelebration } from 'react-icons/md'; // Another example icon
-import Avatar from '../components/Avatar';
-import LazyImage from '../components/LazyImage';
+import { BiCake } from 'react-icons/bi';
+// Ensure you have react-icons installed
+import { MdCelebration } from 'react-icons/md';
+
+import bear from '../assets/images/bear.png';
 import chris from '../assets/images/chris.webp';
 import max from '../assets/images/max.webp';
-import bear from '../assets/images/bear.png';
-
+// Another example icon
+import Avatar from '../components/Avatar';
+import LazyImage from '../components/LazyImage';
 
 const imageDimension = "140";
 
@@ -40,13 +42,14 @@ export default function AboutUs() {
                         <p className='absolute bottom-0 right-3 text-secondary drop-shadow-lg font-Pacifico text-2xl'> Max Pugh</p>
                     </div>
                     <p className="prose prose-lg mx-auto md:mx-0">
-                        Chris’s initial journey wasn’t smooth sailing. He explored no-code platforms and various software development agencies. His search for a technical partner led him to Max, a fellow St. Louis native with shared roots that traced back to the same high school and stretched out to colleges in Los Angeles. Their connection over LinkedIn was a stroke of fate - two individuals with similar journeys, converging to solve a common challenge.
+                        Chris’s initial journey wasn’t smooth sailing. He explored no-code platforms and various software development agencies. His search for a technical partner led him to Max, a fellow St. Louis native with shared roots that traced back to the same high school and stretched out to colleges in Los Angeles. Fresh out of his degree in Computer Science and eager to leverage what he's learned working with companies like Netflix, Max was ready to take on a new challenge.
                     </p>
                 </div>
                 <div class="divider divider-accent "></div>
 
                 <div className='flex flex-col justify-center align-middle content-center'>
                     <p className="prose prose-lg mx-auto md:mx-0 text-left">
+                        Their connection over LinkedIn was a stroke of fate - two individuals with similar journeys, converging to solve a common challenge.
                         A few meetings at a local coffee shop solidified their connection, and Max and Chris decided to join forces. Together, Chris, with his vision and previous startup experience, and Max, with his technical expertise, embarked on the mission to build Bear.
                     </p>
                     <LazyImage src={bear} alt="Bear" className=" w-[140px] h-[200px] md:w-[200] md:h-[270] drop-shadow-xl object-cover float-left mb-3 mx-auto" />
