@@ -42,7 +42,7 @@ export default function AboutUs() {
                         <p className='absolute bottom-0 right-3 text-secondary drop-shadow-lg font-Pacifico text-2xl'> Max Pugh</p>
                     </div>
                     <p className="prose prose-lg mx-auto md:mx-0">
-                        Chris’s initial journey wasn’t smooth sailing. He explored no-code platforms and various software development agencies. His search for a technical partner led him to Max, a fellow St. Louis native with shared roots that traced back to the same high school and stretched out to colleges in Los Angeles. Fresh out of his degree in Computer Science and eager to leverage what he's learned working with companies like Netflix, Max was ready to take on a new challenge.
+                        Chris’s initial journey wasn’t smooth sailing. He explored no-code platforms and various software development agencies. His search for a technical partner led him to Max, a fellow St. Louis native with shared roots that traced back to the same high school and stretched out to colleges in Los Angeles. Fresh out of his degree in Computer Science ands eager to leverage what he's learned working with companies like Netflix, Max was ready to take on a new challenge.
                     </p>
                 </div>
                 <div class="divider divider-accent "></div>

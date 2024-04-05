@@ -274,19 +274,17 @@ export default function Home(props) {
                 <div className='max-w-[1000px] h-[600px] md:h-[800px] gap-12 mx-auto flex  y-10 justify-center'>
 
 
-                    <div className='mx-auto invisible md:visible'>
-                        {/* <LazyImage src={phone} alt='phone' className="drop-shadow-xl min-w-[250px] max-w-[300px] mx-auto hidden sm:block " /> */}
-                    </div>
 
 
-                    <div className='flex flex-col max-w-[500px] self-center text-base-100 basis-[300-px] min-w-[400px] md:pl-10 mx-auto items-center'>
+
+                    <div className='flex flex-col max-w-[900px] self-center text-base-100 basis-[300-px] min-w-[400px] mx-auto items-center'>
 
 
-                        <p className='text-left text-slate-100 max-w-[80%] drop-shadow-2xl prose'>
+                        <p className=' text-center text-slate-100 drop-shadow-xl prose text-md md:text-2xl  max-w-[70%]'>
                             Designed for the thoughtful, the forgetful, and those who just want to make someone's day. Bear is the perfect tool to help you remember important dates and send thoughtful gifts on time.
                             We are working hard to bring you the best experience possible. Sign up to get notified when we launch.
                         </p>
-                        <div className='flex gap-4 justify-start mt-7 pb-10 self-start pl-10'>
+                        <div className='flex gap-4  mt-7 pb-10  '>
                             <button className='btn btn-secondary' onClick={props.handleGetNotified}>Get Notified</button>
                             {/* <button className='btn btn-ghost'>Contact Us</button> */}
                         </div>
