@@ -7,10 +7,8 @@ import bear from '../assets/images/bear.png';
 import chris from '../assets/images/chris.webp';
 import max from '../assets/images/max.webp';
 // Another example icon
-import Avatar from '../components/Avatar';
 import LazyImage from '../components/LazyImage';
 
-const imageDimension = "140";
 
 
 export default function AboutUs() {

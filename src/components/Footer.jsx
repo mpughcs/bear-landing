@@ -16,6 +16,7 @@ export default function Footer({ focusEntry }) {
 
                     <a className="link link-hover" href="/blog">Blog</a>
                     <a className="link link-hover" href="/about-us">About Us</a>
+                    <a className="link link-hover" href="/privacy-policy">Privacy Policy</a>
 
                     {/* <a className="link link-hover" onClick={() => document.getElementById('my_modal_5').showModal()} >Contact</a> */}
 

@@ -273,10 +273,6 @@ export default function Home(props) {
         " >
                 <div className='max-w-[1000px] h-[600px] md:h-[800px] gap-12 mx-auto flex  y-10 justify-center'>
 
-
-
-
-
                     <div className='flex flex-col max-w-[900px] self-center text-base-100 basis-[300-px] min-w-[400px] mx-auto items-center'>
 
 

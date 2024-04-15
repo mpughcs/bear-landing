@@ -40,6 +40,7 @@ export default function NavBar({ handleAboutPressed, onThemeChange }) {
         <ul className="menu menu-horizontal px-1 w-screen flex items-baseline">
           <li><a className='hidden sm:block' href="/about-us">About Us</a></li>
           <li><a className='hidden  sm:block' href="/blog">Blog</a></li>
+          {/* <li><a className='hidden  sm:block' href="/privacy-policy">Privacy Policy</a></li> */}
 
           <li className='sm:hidden z-50'>
             <details className='self-baseline'>
