@@ -11,6 +11,7 @@ import NavBar from './components/Navbar';
 import AboutUs from './pages/AboutUs';
 import BlogOverview from './pages/BlogOverview';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import Contact from './pages/Contact';
 import Home from './pages/Home';
 
 // TODO: 
@@ -51,7 +52,8 @@ function App() {
               </BlogProvider>
             } />
             <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </Router>
         <Footer focusEntry={focusFooterEntry} />
