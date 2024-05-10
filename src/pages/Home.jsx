@@ -5,6 +5,8 @@ import { BiBot } from "react-icons/bi";
 import { FaBell } from "react-icons/fa6";
 import { LuAlarmClock } from "react-icons/lu";
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import axios from 'axios';
+
 
 import chris from '../assets/images/chris.webp';
 import splash_image from '../assets/images/deviceframes.webp';
@@ -17,13 +19,45 @@ import Avatar from "../components/Avatar";
 import Footer from '../components/Footer';
 import LazyImage from '../components/LazyImage';
 import ResponsiveCard from '../components/ResponsiveCard';
+import AdvertiserThumbnail from "../components/AdvertiserThumbnail";
+
+
+const marqueeVariants = {
+    animate: {
+        x: [0, -1000], // Example value, adjust based on actual width
+        transition: {
+            x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 30, // Control speed
+                ease: "linear"
+            },
+        },
+    },
+};
 
 export default function Home(props) {
 
     const aboutSectionRef = React.useRef(null);
     const entryTransition = .58;
     const staggerTransition = 0.1;
+    const [advertisers, setAdvertisers] = useState([]);
 
+
+
+    const fetchAdvertisers = async () => {
+        try {
+            const response = await axios.get('https://us-central1-bearmvp-fa95e.cloudfunctions.net/getAdvertiserDataFromFirestore');
+            setAdvertisers(response.data);
+            console.log(response.data);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    useEffect(() => {
+        fetchAdvertisers();
+    }, []);
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -35,8 +69,36 @@ export default function Home(props) {
             },
         },
     };
+    const scrollVariants = {
+        animate: {
+            // x: [-100, 100],
+            x: 100,
+            transition: {
+                x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 10, // Adjust duration to control speed
+                    ease: "linear"
+                }
+            }
+        }
+    };
+    const renderAdvertisers = () => {
+        // Duplicate the list of advertisers for seamless looping
+        const allAdvertisers = [...advertisers, ...advertisers];
+        return (
+            <motion.div className="flex"
+                variants={marqueeVariants}
+                initial="start"
+                animate="animate"
+            >
+                {allAdvertisers.map((advertiser, index) => (
+                    <AdvertiserThumbnail key={index} advertiser={advertiser} />
+                ))}
+            </motion.div>
+        );
+    };
 
-    // Variants for each list item
     const itemVariants = {
         hidden: {
             opacity: 0,
@@ -116,7 +178,7 @@ export default function Home(props) {
 
 
             </header>
-            <section className="px-[2rem] pb-[2rem] mx-auto max-w-screen-2xl">
+            <section className="px-[2rem] mx-auto max-w-screen-2xl">
 
                 <div className='flex flex-col sm:flex-row justify-center align-middle '>
                     <motion.div className='max-w-md pb-[140px] flex flex-col pt-[2rem] sm:gap-8 sm:pb-0 z-[1] drop-shadow-md'
@@ -188,6 +250,10 @@ export default function Home(props) {
 
                     </motion.div>
 
+                    {/* <div className='max-w-[40%] flex-1'>
+                        <p>{advertisers.data}</p>
+                        </div> */}
+
                     <div className='max-w-[40%] flex-1'>
                         <motion.div
                             initial={{ x: -100, opacity: 0 }}
@@ -206,6 +272,14 @@ export default function Home(props) {
             </section>
 
             {/* how it works */}
+            <section className=' px-5 h-fit ' >
+                {/* <div className='flex flex-col gap-7 max-w-[1300px] mx-auto py-12'> */}
+                <div className=" ">
+
+                    {renderAdvertisers()}
+                </div>
+
+            </section>
             <section className='bg-base-200 p-5 h-fit' ref={aboutSectionRef}>
                 <div className='flex flex-col gap-7 max-w-[1300px] mx-auto py-12'>
                     <h1 className='font-Poppins text-4xl text-center'>How it works</h1>
