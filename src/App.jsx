@@ -13,6 +13,7 @@ import BlogOverview from './pages/BlogOverview';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
+import TermsOfService from './pages/TermsOfService';
 
 
 
@@ -53,6 +54,8 @@ function App() {
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Home />} />
+            <Route path="/terms" element={<TermsOfService />} />
           </Routes>
         </Router>
         <Footer focusEntry={focusFooterEntry} />

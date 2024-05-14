@@ -31,11 +31,11 @@ export default function BlogPreview({ title, content, postDate, createdBy, heade
                     : "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"} alt="headphoto" className="h-[250px] object-cover w-full" /></figure>
                 <div className="badge absolute bg-primary border-none m-2 text-slate-50">{category}</div>
                 <div className='p-4 absolute bottom-0 text-slate-50 drop-shadow-md'>
-                    <p className="card-title w-[60%] ">{title}</p>
+                    <p className="card-title w-[60%] drop-shadow-xl">{title}</p>
                     <span className="flex flex-row gap-2">
 
-                        <p className="text-xs justify-self-end w-fit text-nowrap">{createdBy.displayName}</p>
-                        <p className="text-xs">{postDate}</p>
+                        <p className="text-xs justify-self-end w-fit text-nowrap drop-shadow-xl">{createdBy.displayName}</p>
+                        <p className="text-xs drop-shadow-xl">{postDate}</p>
                     </span>
                 </div>
                 <form method="dialog" className="card-actions absolute bottom-0 right-0 justify-end m-3">

@@ -40,7 +40,7 @@ export default function NavBar({ handleAboutPressed, onThemeChange }) {
         <ul className="menu menu-horizontal px-1 w-screen flex items-baseline">
           <li><a className='hidden sm:block' href="/about-us">About Us</a></li>
           <li><a className='hidden  sm:block' href="/blog">Blog</a></li>
-          <li><a className='hidden  sm:block' href="/contact">Contact Us</a></li>
+          {/* <li><a className='hidden  sm:block' href="/contact">Contact Us</a></li> */}
           
           {/* <li><a className='hidden  sm:block' href="/privacy-policy">Privacy Policy</a></li> */}
 
@@ -52,7 +52,7 @@ export default function NavBar({ handleAboutPressed, onThemeChange }) {
               <ul className="p-2 bg-base-100 rounded-t-none w-[190px]">
                 <li><a href="/about-us">About us</a></li>
                 <li><a href="/blog">Blog</a></li>
-                <li><a href="/contact">Contact Us</a></li>
+                {/* <li><a href="/contact">Contact Us</a></li> */}
               </ul>
             </details>
           </li>

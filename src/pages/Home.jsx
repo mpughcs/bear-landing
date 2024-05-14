@@ -10,14 +10,10 @@ import axios from 'axios';
 
 import chris from '../assets/images/chris.webp';
 import splash_image from '../assets/images/deviceframes.webp';
+import appstore from '../assets/images/appstore.png';
 import account from '../assets/images/graphics/account.svg';
 import cal from '../assets/images/graphics/cal.svg';
 import gift from '../assets/images/graphics/gifts.svg';
-import max from '../assets/images/max.webp';
-import phone from '../assets/images/phone.webp'
-import Avatar from "../components/Avatar";
-import Footer from '../components/Footer';
-import LazyImage from '../components/LazyImage';
 import ResponsiveCard from '../components/ResponsiveCard';
 import AdvertiserThumbnail from "../components/AdvertiserThumbnail";
 
@@ -87,7 +83,7 @@ export default function Home(props) {
         // Duplicate the list of advertisers for seamless looping
         const allAdvertisers = [...advertisers, ...advertisers];
         return (
-            <motion.div className="flex"
+            <motion.div className="flex "
                 variants={marqueeVariants}
                 initial="start"
                 animate="animate"
@@ -131,44 +127,6 @@ export default function Home(props) {
 
     return (
         <main className="overflow-hidden duration-20 transition-all select-none">
-
-
-            {/* contact modal */}
-            {/* <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-
-                <div className="modal-box prose">
-                    <h2 className="">Contact Us</h2>
-                    <p className="">Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
-                    <form action="#" className="flex flex-col gap-5">
-                        <div>
-                            <label htmlFor="email" className="">Your email</label>
-                            <input type="email" id="email" className="shadow-sm  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
-                        </div>
-                        <div>
-                            <label htmlFor="firstname" className="">Your first name</label>
-                            <input type="fname" id="fname" className="shadow-sm  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Jane" required />
-                        </div>
-                        <div>
-                            <label htmlFor="subject" className="">Subject</label>
-                            <input type="text" id="subject" className="shadow-sm border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required />
-                        </div>
-                        <div>
-                            <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-                            <textarea id="message" rows="6" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
-
-                        </div>
-
-                        <button type="submit" className=" btn">Send message</button>
-                        <div method="dialog">
-                            <button className="btn w-full">Close</button>
-                        </div>
-
-
-                    </form>
-
-                </div>
-            </dialog> */}
-
 
 
 
@@ -235,9 +193,9 @@ export default function Home(props) {
 
 
                         >
-                            <h1 className=' font-Pacifico  my-6'>Coming soon...</h1>
+                            <h1 className=' font-Pacifico  my-6'> Now in Beta!</h1>
                             <div className='flex '>
-                                <button onClick={props.handleGetNotified} className='btn btn-primary'>Get Notified</button>
+                                <a href="https://testflight.apple.com/join/HptGm8EQ" className='btn btn-primary'> Join The Beta</a>
                                 <button onClick={handleLearnMore} className='btn btn-ghost'>Learn More</button>
                             </div>
                         </motion.div>
@@ -263,7 +221,9 @@ export default function Home(props) {
                         >
                             <div className='z-0'>
                                 {/* <LazyImage src={splash_image} alt='splash' className='drop-shadow-xl min-w-[500px] absolute sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 ' /> */}
-                                <img src={splash_image} className='drop-shadow-xl min-w-[500px] absolute sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 ' />
+                                <img src={splash_image} className='drop-shadow-xl min-w-[500px] absolute max-w-[500px] sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 overflow-visible' />
+                                <img src={appstore} className='object-cover w-[150px] my-5 absolute bottom-[200px] invisible sm:visible left-[70%]' />
+
                             </div>
                         </motion.div>
                     </div>
@@ -274,8 +234,8 @@ export default function Home(props) {
             {/* how it works */}
             <section className=' px-5 h-fit ' >
                 {/* <div className='flex flex-col gap-7 max-w-[1300px] mx-auto py-12'> */}
-                <div className=" ">
-
+                <div className="">
+                    <h1 className='font-Poppins text-2xl sm:py-5'>Our Advertisers:</h1>
                     {renderAdvertisers()}
                 </div>
 
@@ -351,8 +311,7 @@ export default function Home(props) {
 
 
                         <p className=' text-center text-slate-100 drop-shadow-xl prose text-md md:text-2xl  max-w-[70%]'>
-                            Designed for the thoughtful, the forgetful, and those who just want to make someone's day. Bear is the perfect tool to help you remember important dates and send thoughtful gifts on time.
-                            We are working hard to bring you the best experience possible. Sign up to get notified when we launch.
+                        Bear transforms the art of gift-giving into a seamless, joyful experience. Designed for anyone who values thoughtful gestures, Bear is your ultimate mobile companion for picking the perfect gift for every occasion. 
                         </p>
                         <div className='flex gap-4  mt-7 pb-10  '>
                             <button className='btn btn-secondary' onClick={props.handleGetNotified}>Get Notified</button>
