@@ -122,6 +122,15 @@ export default function Home(props) {
         }
     }
 
+    const handlePressBeta = () => {
+        const result = window.confirm('Would you like to join the beta?');
+        if (result) {
+            window.location.href = 'https://testflight.apple.com/join/HptGm8EQ';
+        } else {
+            console.log('Cancel Pressed');
+        }
+    }
+
 
 
 
@@ -195,7 +204,7 @@ export default function Home(props) {
                         >
                             <h1 className=' font-Pacifico  my-6'> Now in Beta!</h1>
                             <div className='flex '>
-                                <a href="https://testflight.apple.com/join/HptGm8EQ" className='btn btn-primary'> Join The Beta</a>
+                                <button onClick={handlePressBeta} className='btn btn-primary'> Join The Beta</button>
                                 <button onClick={handleLearnMore} className='btn btn-ghost'>Learn More</button>
                             </div>
                         </motion.div>
@@ -235,7 +244,7 @@ export default function Home(props) {
             <section className=' px-5 h-fit ' >
                 {/* <div className='flex flex-col gap-7 max-w-[1300px] mx-auto py-12'> */}
                 <div className="">
-                    <h1 className='font-Poppins text-2xl sm:py-5'>Our Advertisers:</h1>
+                    <h1 className='font-Poppins text-2xl sm:py-5'>Our Partners:</h1>
                     {renderAdvertisers()}
                 </div>
 
