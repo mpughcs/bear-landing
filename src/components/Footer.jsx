@@ -42,6 +42,8 @@ export default function Footer({ focusEntry }) {
                 <nav>
                     <h6 class="footer-title">Company</h6>
                     <a className="link link-hover" href="/contact">Contact</a>
+                    <a className="link link-hover" href="https://www.linkedin.com/company/100541528/">LinkedIn</a>
+
                 </nav>
                 <nav>
                     <h6 class="footer-title">Legal</h6>
