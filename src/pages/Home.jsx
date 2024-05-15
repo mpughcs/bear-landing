@@ -204,7 +204,7 @@ export default function Home(props) {
                         >
                             <h1 className=' font-Pacifico  my-6'> Now in Beta!</h1>
                             <div className='flex '>
-                                <button onClick={handlePressBeta} className='btn btn-primary'> Join The Beta</button>
+                                <a href={'https://testflight.apple.com/join/HptGm8EQ'} className='btn btn-primary'> Join The Beta</a>
                                 <button onClick={handleLearnMore} className='btn btn-ghost'>Learn More</button>
                             </div>
                         </motion.div>
