@@ -141,7 +141,7 @@ export default function Home(props) {
 
             <header>
                 {/* add icon and title to page */}
-                <title>Bear</title>
+                <title>Gift with Bear</title>
 
 
             </header>
