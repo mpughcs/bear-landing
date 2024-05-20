@@ -42,10 +42,9 @@ function App() {
           <title>Gift With Bear</title>
           <meta property="og:title" content="Gift With Bear" />
           <meta property="og:description" content="Never miss a special ocassion again. Add events, set reminders, and purchase gifts all in one place." />
-          <meta property="og:image" content="/preview.png" />
+          <meta property="og:image" content="https://giftwithbear.com/preview.png" />
           <meta property="og:url" content="https://giftwithbear.com" />
           <meta property='og:type' content='website' />
-          <meta property='og:locale' content='en_US' />
 
         </Helmet>
         <NavBar handleAboutPressed={handleAboutPressed} />
