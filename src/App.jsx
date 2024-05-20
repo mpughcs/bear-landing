@@ -40,7 +40,7 @@ function App() {
         <Helmet>
           <meta name="description" content="Never miss a special ocassion again. Add events, set reminders, and purchase gifts all in one place." />
           <meta name="keywords" content="Calendar, Events, Reminders, Gift, Gift with Bear" />
-          <title>Bear</title>
+          <title>Gift With Bear</title>
         </Helmet>
         <NavBar handleAboutPressed={handleAboutPressed} />
         <Router >
