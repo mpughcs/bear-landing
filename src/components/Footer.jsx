@@ -32,7 +32,7 @@ export default function Footer({ focusEntry }) {
             <footer class="footer p-10 text-base-content items-baseline">
                 <aside>
                     <img src={ico} alt="logo" className="w-10 h-10" />
-                    <p>Gift with Bear LLC, Copyright @ 2024</p>
+                    <p>Gift With Bear LLC, Copyright @ 2024</p>
                 </aside>
                 <nav>
                     <h6 class="footer-title">Info</h6>
@@ -48,7 +48,7 @@ export default function Footer({ focusEntry }) {
                 <nav>
                     <h6 class="footer-title">Legal</h6>
                     <a class="link link-hover" href="/terms">Terms of Service</a>
-                    <a class="link link-hover" href="/privacy-policy">Privacy policy</a>
+                    <a class="link link-hover" href="/privacy-policy">Privacy Policy</a>
                 </nav>
                 <nav>
                     <MailChimpSub focusEntry={focusEntry} />
