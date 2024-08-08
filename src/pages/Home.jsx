@@ -16,7 +16,8 @@ import cal from '../assets/images/graphics/cal.svg';
 import gift from '../assets/images/graphics/gifts.svg';
 import ResponsiveCard from '../components/ResponsiveCard';
 import AdvertiserThumbnail from "../components/AdvertiserThumbnail";
-
+import ImageCarousel from "../components/ImageCarousel";
+import Countdown from "../components/Countdown.jsx";
 
 const marqueeVariants = {
     animate: {
@@ -38,6 +39,8 @@ export default function Home(props) {
     const entryTransition = .58;
     const staggerTransition = 0.1;
     const [advertisers, setAdvertisers] = useState([]);
+    // august 14th 2024 date objust
+    const releaseDate = new Date('August 14, 2024 00:00:00')
 
 
 
@@ -163,7 +166,7 @@ export default function Home(props) {
 
 
                         <motion.ul
-                            className='flex flex-col gap-4 pl-1 text-primary '
+                            className='flex flex-col gap-4 pl-1 text-primary pt-5 '
                             variants={containerVariants}
                             initial="hidden"
                             animate="visible"
@@ -202,7 +205,8 @@ export default function Home(props) {
 
 
                         >
-                            <h1 className=' font-Pacifico  my-6'> Now in Beta!</h1>
+                            <h1 className=' font-Pacifico  my-6'>Available in</h1>
+                            <h2 className="font-Poppins"><Countdown targetDate={releaseDate} /></h2>
                             <div className='flex '>
                                 <a href={'https://testflight.apple.com/join/HptGm8EQ'} className='btn btn-primary'> Join The Beta</a>
                                 <button onClick={handleLearnMore} className='btn btn-ghost'>Learn More</button>
@@ -239,6 +243,8 @@ export default function Home(props) {
 
                 </div>
             </section>
+
+
 
             {/* how it works */}
             <section className=' px-5 h-fit ' >
@@ -320,7 +326,7 @@ export default function Home(props) {
 
 
                         <p className=' text-center text-slate-100 drop-shadow-xl prose text-md md:text-2xl  max-w-[70%]'>
-                        Bear transforms the art of gift-giving into a seamless, joyful experience. Designed for anyone who values thoughtful gestures, Bear is your ultimate mobile companion for picking the perfect gift for every occasion. 
+                            Bear transforms the art of gift-giving into a seamless, joyful experience. Designed for anyone who values thoughtful gestures, Bear is your ultimate mobile companion for picking the perfect gift for every occasion.
                         </p>
                         <div className='flex gap-4  mt-7 pb-10  '>
                             <button className='btn btn-secondary' onClick={props.handleGetNotified}>Get Notified</button>
@@ -331,6 +337,11 @@ export default function Home(props) {
                 </div>
             </section>
             <section>
+                 {/* <div className="max-w-7xl mx-auto">
+
+
+                <ImageCarousel />
+            </div> */}
 
             </section>
 
