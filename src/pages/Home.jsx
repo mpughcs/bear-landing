@@ -128,7 +128,7 @@ export default function Home(props) {
     const handlePressBeta = () => {
         const result = window.confirm('Would you like to join the beta?');
         if (result) {
-            window.location.href = 'https://testflight.apple.com/join/HptGm8EQ';
+            window.location.href = 'https://apps.apple.com/us/app/gift-with-bear/id6502307292';
         } else {
             console.log('Cancel Pressed');
         }
@@ -205,10 +205,10 @@ export default function Home(props) {
 
 
                         >
-                            <h1 className=' font-Pacifico  my-6'>Available in</h1>
-                            <h2 className="font-Poppins"><Countdown targetDate={releaseDate} /></h2>
+                            <h1 className=' font-Pacifico  my-6'>Available now!</h1>
+                            {/* <h2 className="font-Poppins"><Countdown targetDate={releaseDate} /></h2> */}
                             <div className='flex '>
-                                <a href={'https://testflight.apple.com/join/HptGm8EQ'} className='btn btn-primary'> Join The Beta</a>
+                                <a href={'https://apps.apple.com/us/app/gift-with-bear/id6502307292'} className='btn btn-primary'> Download</a>
                                 <button onClick={handleLearnMore} className='btn btn-ghost'>Learn More</button>
                             </div>
                         </motion.div>
@@ -235,7 +235,7 @@ export default function Home(props) {
                             <div className='z-0'>
                                 {/* <LazyImage src={splash_image} alt='splash' className='drop-shadow-xl min-w-[500px] absolute sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 ' /> */}
                                 <img src={splash_image} className='drop-shadow-xl min-w-[500px] absolute max-w-[500px] sm:static bottom-0 left-[80%] mx-auto opacity-25 sm:opacity-100 overflow-visible' />
-                                <img src={appstore} className='object-cover w-[150px] my-5 absolute bottom-[200px] invisible sm:visible left-[70%]' />
+                                {/* <img src={appstore} className='object-cover w-[150px] my-5 absolute bottom-[200px] invisible sm:visible left-[70%]' /> */}
 
                             </div>
                         </motion.div>
