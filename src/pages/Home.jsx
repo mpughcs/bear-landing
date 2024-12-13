@@ -252,15 +252,7 @@ export default function Home(props) {
 
 
 
-            {/* how it works */}
-            <section className=' px-5 h-fit ' >
-                {/* <div className='flex flex-col gap-7 max-w-[1300px] mx-auto py-12'> */}
-                <div className="">
-                    <h1 className='font-Poppins text-2xl sm:py-5'>Our Partners:</h1>
-                    {renderAdvertisers()}
-                </div>
-
-            </section>
+          
             <section className='bg-base-200 p-5 h-fit' ref={aboutSectionRef}>
                 <div className='flex flex-col gap-7 max-w-[1300px] mx-auto py-12'>
                     <h1 className='font-Poppins text-4xl text-center'>How it works</h1>
